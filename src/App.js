@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter , Route, Switch,Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import Test from './Test';
 import Cart from './Cart';
 import List from './List';
 
@@ -19,17 +18,11 @@ class App extends Component {
             <Link to='/cart'>
               <button>{'cart('+this.getCartCount(this.props.cart)+')'}</button>
             </Link>
-
-            <Link to='/test'>
-              <button>test</button>
-            </Link>
-            
           </div>
   
         <Switch>
           <Route exact path='/' component={List}/>
           <Route path='/cart' component={Cart}/>
-          <Route path='/test' component={Test}/>
         </Switch>
         </div>
      )

@@ -1,6 +1,4 @@
 const initialState = {
-    count:0,
-    theme:'light',
     cart:[]
 }
 
@@ -8,18 +6,6 @@ const reducer = (state = initialState, action) =>{
 
     const newState = {...state}
     
-    if(action.type === '+'){
-        newState.count += 1; 
-    }
-
-    if(action.type === '-' && newState.count > 0){
-        newState.count -= 1;
-    }
-
-    if(action.type === 'change_theme'){
-        newState.theme = action.newTheme;
-    }
-
     if(action.type === 'add_cart'){
         addNew(action.pd);
     }
